@@ -1,0 +1,150 @@
+# P01 · Brief & Script Interpretation
+
+**Section:** 01 — Planning
+**Workflow step:** Step 1 of 10  
+**Current version:** v1.2  
+**Status:** ✅ Tested
+**Last updated:** March 29th 2026
+
+---
+
+## 📌 Prompt Text (v1.2 — current)
+
+```
+You are a background art supervisor at a 2D animation studio 
+working on The Adventures of Tintin. Read the script excerpt 
+below and extract every unique background location required.
+
+Include the following sections:
+1. Location name
+2. Scene number(s) it appears in
+3. Time of day (if specified or implied)
+4. Mood or atmosphere (if specified or implied)
+5. Key props or environmental details mentioned
+6.Estimated complexity: Low / Medium / High
+  where Low = simple interior, Medium = exterior with props,High = multi-layer environment or complex lighting
+Tone: warm, encouraging, and professional. 
+7.Flag any scenes where background requirements are unclear or missing. Maximum one entry per unique location.
+
+
+```
+
+| Placeholder | Source | Example |
+|-------------|--------|---------|
+| `[JOB_TITLE]` | HRIS new hire record | Retail Sales Associate |
+| `[STORE_NAME]` | HRIS location field | Northland Shopping Centre |
+| `[START_DATE]` | HRIS start date | Monday 24 March 2025 |
+| `[MANAGER_NAME]` | HRIS reporting line | Sarah Chen |
+| `[HR_NAME]` | Static — HR team roster | James Okafor |
+
+---
+
+## 🏢 Intended Workflow or Task
+
+This prompt is **Step 1** of the planning chain 
+
+- **Trigger:** Script pages 1–18 received from director/production coordinator
+- **Actor:** Background art supervisor reviews the extracted location list
+- **Timing:** Start of production — before any backgrounds are assigned or built
+- **Next step:** P02 (Workload Prioritisation)
+
+```Director sends Tintin script pages 1–18
+      ↓
+[P01 RUNS — extracts all background locations]
+      ↓
+Supervisor reviews and approves location list
+      ↓
+List passed to P02 for prioritisation
+---
+
+## ❗ Problem Being Solved
+
+Background artists in a typical 2D animation studio spend an average of 8 hours per background manually painting detailed environments from scratch.
+
+In a mid-sized studio producing 20 episodes per season with an average of 12 unique backgrounds per episode, this generates ~1,920 hours of repetitive detailing work per season — for one studio alone.
+**Pain points addressed:**
+- Implied locations buried in action lines missed during manual reads
+- Mood and atmosphere notes inconsistently captured across supervisors
+- No standardised format — every supervisor extracts differently
+- New artists can't independently interpret vague scene directions
+---
+
+## ⚡ Automation Potential
+
+**Level: High**
+
+| Dimension | Assessment |
+|-----------|------------|
+| Repetitiveness | Very high — same structure every time |
+| Data availability | All placeholders exist in HRIS |
+| Human judgment needed | Low — tone review only |
+| Integration possibility | Could trigger automatically from HRIS workflow |
+| Estimated time saving | ~80% (45 min → ~8 min including review) |
+
+**Human-in-the-loop role:** HR coordinator reads output, checks placeholders resolved correctly, and clicks send. No rewriting expected at v1.2.
+
+**Scaling note:** A chain of 10 stores hiring 4/month = 480 emails/year. Automation saves approximately **324 hours annually** at current manual rate.
+
+---
+
+## ⚠️ Risks and Limitations
+
+| Risk | Level | Mitigation |
+|------|-------|------------|
+| Hallucination if placeholders are empty or malformed | Medium | Validate all fields in HRIS before prompt runs. System should reject prompt if any placeholder is null. |
+| Generic or impersonal output despite personalisation | Low | v1.2 testing shows this is rare; coordinator review catches it |
+| Confidential data included accidentally | Low | Prompt explicitly excludes salary/contract terms; HRIS integration should not pass financial fields |
+| Tone mismatch for unusual roles (e.g. senior management hire) | Low | This prompt is scoped to frontline retail roles only. Senior hires use a separate template. |
+
+**Overall risk rating: LOW** — suitable for near-full automation with lightweight human review.
+
+---
+
+## 🔄 Version History
+
+### v1.0 — Initial draft
+**Date:** 5 March 2025  
+**Prompt:** `Write a welcome email for a new staff member starting at our store.`  
+**Output:** Generic, no structure, missing key contacts, 380 words (too long)  
+**Observed effect:** Required complete rewrite by coordinator — no time saving  
+**Lesson learned:** Need role assignment, structure, word limit, and explicit field list
+
+---
+
+### v1.1 — Added RACE framework
+**Date:** 10 March 2025  
+**Change:** Added "You are an HR onboarding specialist" role + structured section list  
+**Output:** Much better structure; coordinator only edited tone. But still no word limit — output sometimes ran to 300+ words.  
+**Observed effect:** Edit time reduced from 45 min to ~14 min  
+**Lesson learned:** Word limits and exclusions are essential for production-ready output
+
+---
+
+### v1.2 — Added constraints and exclusions ✅ Current
+**Date:** 15 March 2025  
+**Change:** Added 220-word limit; added explicit "do not include" clause for salary/contract  
+**Output:** Consistent, send-ready in 4 of 5 test runs. Average coordinator edit time: 2 min.  
+**Observed effect:** Output rated "excellent" or "good" by 3 HR coordinators in blind review  
+**Lesson learned:** Explicit exclusion clauses prevent the most common errors without needing post-editing
+
+---
+
+## 📊 A/B Test Results
+
+**Test date:** 17 March 2025 | **Evaluators:** 3 HR coordinators (blind)
+
+| Criteria | v1.0 score | v1.2 score |
+|----------|------------|------------|
+| Readability | 2/5 | 4.7/5 |
+| Completeness | 1/5 | 4.8/5 |
+| Tone appropriateness | 3/5 | 4.5/5 |
+| Send-ready without edit | 0/5 | 4/5 |
+| **Overall** | **1.5/5** | **4.5/5** |
+
+---
+
+## 🔗 Related Prompts
+
+- **Next in chain:** [P02 — Induction schedule](P02-induction-schedule.md)
+- **Also uses:** [P03 — Role briefing](P03-role-briefing.md) (handed to hire on Day 1)
+- **Parent section:** [01-onboarding/README.md](README.md)
