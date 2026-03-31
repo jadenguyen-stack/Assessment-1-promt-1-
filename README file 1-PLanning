@@ -1,0 +1,27 @@
+# 📂 01 — PLanning
+
+**Business function:** Background Art Production — 2D Animation Studio
+**Trigger:** New episode script or revised script received from director or production coordinator
+**Prompts in this section:** P01, P02
+
+---
+
+## Section Purpose
+
+This section supports the initial planning stage of background production in a 2D animation studio. It focuses on transforming raw script content into structured, production-ready information and prioritising workload based on complexity and deadlines.
+
+By automating script interpretation and task prioritisation, this section reduces manual planning effort, improves alignment across the team, and ensures that high-risk or complex scenes are identified early in the pipeline.
+
+## Chain Diagram (if applicable)
+
+```
+Director sends episode script → [P01 RUNS — extracts all unique background locations] → Supervisor reviews and approves location list → [P02 RUNS — ranks locations by deadline and complexity] → Department lead approves ranked work order → Work order distributed to artists → 02-pre-production begins
+
+## Prompts
+
+| File | Prompt | Status |
+|------|--------|--------|
+| [P01-brief-script-interpretation.md](P01-brief-script-interpretation.md) | [Brief & Script Interpretation] | ✅ Tested |
+| [P02-workload-prioritisation.md](P02-workload-prioritisation.md) | [Workload Prioritisation] | ✅ Tested |
+
+---.
