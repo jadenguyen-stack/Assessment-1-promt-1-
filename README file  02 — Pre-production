@@ -1,0 +1,46 @@
+# 📂  02 — Pre-production
+
+**Business function:** Background Art Production — 2D Animation Studio
+**Trigger:** P02 ranked work order approved and distributed to background artists
+**Prompts in this section:** P03, P04, P05
+---
+
+## Section Purpose
+
+
+The production section supports background artists and supervisors during active painting by providing structured checks at three critical quality gates — style consistency, missing detail identification, and asset documentation. 
+
+Each prompt catches a different category of production error before it reaches the final review stage, reducing the volume and cost of late-stage rework.
+
+Together these three prompts create an auditable production record for every background that passes through the pipeline.
+
+
+## Chain Diagram (if applicable)
+
+```
+
+P02 ranked work order distributed to artist
+      ↓
+[P03 RUNS — generates structured reference collection list]
+      ↓
+Artist collects references → art director approves
+      ↓
+[P04 RUNS — generates layout and composition brief]
+      ↓
+Artist produces rough sketch → art director approves
+      ↓
+[P05 RUNS — generates colour key, lighting and mood brief]
+      ↓
+Artist applies colour key → feeds into 03-production
+
+
+## Prompts
+
+
+| File | Prompt | Status |
+|------|--------|--------|
+| [P03-reference-collection.md] | [Reference Collection] | ✅ Tested |
+| [P04-layout-composition.md] | [Layout & Composition Brief] | ✅ Tested |
+| [P05-colour-lighting-mood-spec.md] | [Colour Key, Lighting & Mood Brief] | ✅ Tested |
+
+---.
