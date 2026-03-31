@@ -1,7 +1,7 @@
 # 📂 04 — Review & Handoff
 
-**Business function:** Background Art Production — 2D Animation Studio
-**Trigger:** P08 asset documentation completed and supervisor approval fields signed off
+**Business function:** Background Art Production — 2D Animation Studio  
+**Trigger:** P08 asset documentation completed and supervisor approval fields signed off  
 **Prompts in this section:** P09, P10
 ---
 
@@ -27,9 +27,13 @@ Both departments sign off
       ↓
 Background file transferred to receiving department
 
+```
+
+## Prompts
+
 | File | Prompt | Status |
 |------|--------|--------|
-| [P09-quality-checklist-review.md](P09-quality-checklist-review.md) | [Quality Checklist Review] | ✅ Tested |
-| [P10-handoff-brief.md](P10-handoff-brief.md) | [Handoff Brief] | ✅ Tested |
+| [P09-quality-checklist-review.md](P09-quality-checklist-review.md) | Quality Checklist Review | ✅ Tested |
+| [P10-handoff-brief.md](P10-handoff-brief.md) | Handoff Brief | ✅ Tested |
 
 ---.
