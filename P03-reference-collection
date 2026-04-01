@@ -1,142 +1,27 @@
 # P03 · Reference Collection
 
-**Section:** 02 — Pre-production
-**Workflow step:** Step 3 of 10 feeds into layout brief → composition)  
-**Current version:** v1.1  
-**Status:** ✅ Tested  
-**Last updated:** 30 March 2026
-
 ---
 
-## 📌 Prompt Text (v1.1 — current)
-
+## 📌 Prompt Text 
 ```
 You are a background art researcher in a 2D animation studio.
 
-Using ONLY the scene breakdown information provided below, generate a structured visual reference package to support background design.
-
-Do not infer, assume, or introduce elements that are not explicitly stated in the scene breakdown.
-
-For each scene, produce the following sections:
-
-1. Environment references  
-   (Real-world or stylistic environments directly matching the scene)
-
-2. Architectural / spatial references  
-   (Building style, layout type, spatial organisation if applicable)
-
-3. Colour palette  
-   (Suggested colours based on mood and time of day)
-
-4. Lighting references  
-   (Lighting type, direction, intensity, source)
-
-5. Material / texture references  
-   (Surface types such as wood, stone, fabric, metal)
-
-6. Image search keywords  
-   (5–8 concise keywords suitable for reference gathering)
-
-Constraints:
-- Use ONLY information from the scene breakdown
-- Do NOT add new objects, characters, or settings
-- If a category cannot be derived, write:
-  “Insufficient data — follow-up required”
-- Keep output concise and production-ready
-
-Output format:
-Organise results by scene, using clearly labelled sections.
-```
-
-
-**Placeholders to fill:**
-
-| Placeholder | Source | Example |
-|-------------|--------|---------|
-| `[STAFF_NOTES]` | Staff member's handwritten or verbal account | "Customer slipped near freezer aisle at 2pm. Wet floor sign was not present. Staff member called first aid..." |
+Using ONLY the scene breakdown information provided, generate a structured visual reference package to support background design.
 
 ---
-
-## 🏢 Intended Workflow or Task
-
-Step 1 of a 3-prompt incident management chain.
-
-- **Trigger:** Assigned location from P02 ranked work order
-- **Actor:** Background artists
-- **Timing:** Before layout sketching
-- **Next step:** Output feeds into P04 (layout & composition)
-```
-P01 Scene Breakdown → P03 Reference Generator → Artist selects references → Layout design (P04)
-
----
-
-## ❗ Problem Being Solved
-
-Reference collection is:
-
-time-consuming (30–60 min per scene)
-inconsistent across artists
-duplicated across team members
-
-**Pain points addressed**:
-
-- Slow manual research
-- Lack of standardised references
-- Inconsistent visual direction
-
----
-
-## ⚡ Automation Potential
-
-**Level: High**
-
-| Dimension | Assessment |
-|-----------|------------|
-| Repetitiveness | Very high — same format needed every time |
-| Data availability | Input comes directly from P02 approved location brief |
-| Human judgment needed | High — Artist confirms relevance; art director spot-checks before layout begins |
-| Integration possibility | Output can feed into shared reference board tools such as PureRef or Milanote |
-| Estimated time saving | ~80% — from 1–3 hrs to 15–20 min per location |
-
-**Human-in-the-loop role:** Artists review and select references; AI provides structured starting point.
----
-
-## ⚠️ Risks and Limitations
-
-| Risk | Level | Mitigation |
-|------|-------|------------|
-| AI introduces elements not in scene and include AI generated images | **High** | Grounding constraint: "using ONLY the information provided below" + "do not infer or assume" |
-| Output too generic | Medium | "Insufficient data — follow-up required" fallback built into prompt |
-| Missing details due to limited input | **High** | Governance policy: manager sign-off is mandatory before submission. Prompt output is marked as DRAFT. |
-| Over-reliance on AI suggestions | **High** | Legal review required for any report involving injury, significant property damage, or potential litigation |
-
-**Overall risk rating: MEDIUM** — controlled through strict grounding + human validation
-
----
-
 ## 🔄 Version History
 
-### v1.0 — Initial draft
-**Date:** 30 March 2026  
-**Prompt:** Generate references for this scene
-**Output:** Output generic and inconsistent
-**Observed effect:** Only some references can be use 
+### v1.0
+**Prompt:** Generate references for this scene 
 **Lesson learned:** Make open-ended prompts. Grounding constraint is essential for factual/legal contexts.
 
 ---
 
-### v1.1 — Added RACE + categories + style context ✅ Current
-**Date:** 30 March 2026   
-**Change:** Added researcher role, five reference categories, style instruction and relevance explanation per reference.
-**Output:** Model now leaves gaps explicit rather than filling them. Managers know exactly what requires follow-up.  
-**Observed effect:** too many references and makes artist confuse.  
+### v1.1 
+**Change:** Added researcher role, five reference categories, style instruction and relevance explanation per reference..  
 **Lesson learned:** Make constrain and limits quantity.
 
 ---
 
 ## 🔗 Related Prompts
-
-- **Previous in chain:** P02 — Workload Prioritisation
-- **Next in chain:** P04 — Layout & Composition Brief
-- **Parent section:** 02-pre-production/README.md
-- **Library index:** [README.md](../README.md)
+[P04-layout-composition-brief]
