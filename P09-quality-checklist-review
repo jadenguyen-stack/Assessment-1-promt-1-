@@ -3,16 +3,7 @@
 
 ---
 
-## 📌 Prompt Text 
-
-```
-You are a production asset manager at a 2D animation studio working on The Adventures of Tintin.
-
-Using given description information, generate a complete asset documentation entry for this background.
-
-
-```
-## 🔄 Version History
+## 📌 Prompt Text and history version
 
 ### v1.0 
 **Prompt:** Review this background for quality before handoff. And insert the file 
@@ -21,7 +12,3 @@ Using given description information, generate a complete asset documentation ent
 ### v1.1 
 **Change:**  Added quality control reviewer role, 10 checklist items across 5 categories, PASS/FAIL/UNABLE TO ASSESS status per item
 **Lesson learned:** Checklist-based prompts improve reliability in QA tasks
-
-```
-## 🔗 Related Prompts
-[P010-handoff-brief.md]
