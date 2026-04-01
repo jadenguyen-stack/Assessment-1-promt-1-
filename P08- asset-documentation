@@ -4,29 +4,25 @@
 **Workflow step:**  Step 8 of 10 (feeds into quality review → handoff)
 **Current version:** v1.1  
 **Status:** ✅ Tested  
-**Last updated:** 31 March 2026
+**Last updated:** 1 April 2026
 
 ---
 
 ## 📌 Prompt Text (v1.1 — current)
 
 ```
-You are a production asset manager at a 2D animation studio 
-working on The Adventures of Tintin.
+You are a production asset manager at DeeDee animation studio working on The Adventures of Tintin.
 
-Using ONLY the information provided in the briefs and 
-background description below, generate a complete asset 
-documentation entry for this background.
-Do not add information that is not explicitly stated in 
-the briefs or background description provided.
+Using ONLY the information provided in the briefs and background description below, generate a complete asset documentation entry for this background.
+
+Do not add information that is not explicitly stated in the briefs or background description provided.
 
 Location brief: [LOCATION_BRIEF]
 Layout brief: [P04_OUTPUT]
 Colour key brief: [P05_OUTPUT]
 Background description: [BACKGROUND_DESCRIPTION]
 
-Generate the asset documentation entry in the following 
-structured format:
+Generate the asset documentation entry in the following structured format:
 
 ASSET ID: [AUTO — assign using format BG-[EPISODE]-[SCENE]-[LOCATION CODE]]
 ASSET NAME: [Full location name]
@@ -47,9 +43,8 @@ APPROVED BY: [To be completed by supervisor]
 DATE APPROVED: [To be completed by supervisor]
 NOTES: [Any flagged issues from P06 or P07 still outstanding]
 
-If any field cannot be completed from the information 
-provided, write 
-"Awaiting confirmation — [specify what is needed and from whom]."
+If any field cannot be completed from the information provided, 
+write "Awaiting confirmation — [specify what is needed and from whom]."
 ```
 
 **Placeholders to fill:**
