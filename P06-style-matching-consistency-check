@@ -1,11 +1,5 @@
 # P06 ·  Style Matching & Consistency Check
 
-**Section:** 03 — Production
-**Workflow step:**  Step 6 of 10 (feeds into missing detail identifier → asset documentation)
-**Current version:** v1.1  
-**Status:** ✅ Tested  
-**Last updated:** 30 March 2026
-
 ---
 
 ## 📌 Prompt Text (v1.1 — current)
@@ -13,119 +7,19 @@
 ```
 You are a sstyle consistency checker in DeeDee animation studio working on The Adventures of Tintin.
 
-Using ONLY the style guide rules and background description provided below, check whether the background described conforms to the production's visual style.
+Use the provided information, check whether the background described conforms to the production's visual style.
 
-Do not introduce style rules that are not explicitly stated in the style guide provided.
-
-Style guide: [ Old Pixar style ]
-
-For each style rule, output:
-- Rule name
-- Status: PASS / FAIL / UNABLE TO ASSESS
-- Justification: one sentence explaining the result
-
-Then output a summary:
-- Overall result: PASS / FAIL / CONDITIONAL PASS
-- Number of rules passed
-- Number of rules failed
-- Number unable to assess
-- Recommended action: APPROVE / REVISE / ESCALATE TO ART DIRECTOR
-
-If any style rule cannot be assessed from the background 
-description provided, mark as 
-"UNABLE TO ASSESS — visual review required."
-```
-
-**Placeholders to fill:**
-
-| Placeholder | Source | Example |
-|-------------|--------|---------|
-| `[STYLE_GUIDE_RULES]` | Production style guide document | "Hergé ligne claire rules — see example below" |
-| `[BACKGROUND_DESCRIPTION]` | Artist's written description of completed background | "Street Market background — flat cobblestone fill, cream and rust awnings, soft grey shadows, no texture detail on walls..." |
----
-
-## 🏢 Intended Workflow or Task
-
-Step 1 of the production chain — runs once per background after the artist submits their completed colour key for review
-
-- **Trigger:** Artist submits completed colour key background for style review
-- **Actor:** Background supervisor
-- **Timing:** Before background enters asset documentation
-- **Next step:** PASS or CONDITIONAL PASS feeds into P07 (Missing Detail Identifier). FAIL returned to artist for revision.
 
 ```
-Artist submits completed colour key background
-      ↓
-[P06 RUNS — checks background against style guide rules]
-      ↓
-Supervisor reviews result
-      ↓
-PASS / CONDITIONAL PASS → feeds into P07
-FAIL → returned to artist for revision
-```
-
----
-
-## ❗ Problem Being Solved
-Cut down on:
-
-- time-consuming (20–40 minutes per scene) and manually determining shot type, camera angle and compositional approach   
-- inconsistent between artists
-- heavily dependent on individual experience
-
-**Pain points addressed:**
-- Some missed violation reaching final quality check
-- Inconsistent review standards across different supervisors
-- Unfamiliar with the rules and violations
-- No structured record of which backgrounds passed or failed style check
-
-## ⚡ Automation Potential
-
-**Level: Medium-High**
-
-| Dimension | Assessment |
-|-----------|------------|
-| Repetitiveness | Triggered once per location per episode |
-| Data availability | Requires both P02 location brief and P03 reference collection as input |
-| Human judgment needed | High — Art director reviews layout brief before artist begins sketching — compositional choices have creative implications |
-| Integration possibility | Output can be attached directly to location entry in Shotgrid or Notion |
-| Estimated time saving | ~40–60% — from 30–60 min to 10 min per location |
-
-**Human-in-the-loop role:** Artists refine composition and adjust creative decisions.
-
----
-
-## ⚠️ Risks and Limitations
-
-| Risk | Level | Mitigation |
-|------|-------|------------|
-| AI suggests compositional choices unsupported by brief or references | **High** | Grounding constraint: "Using ONLY the reference collection and location brief provided" |
-| Over-restricting creativity | Medium | Use as starting draft only |
-| Camera angle or shot type conflicts with storyboard or character blocking | **High** | Human refinement required |
-| Junior artist proceeds without art director review | **High** | Legal review required for any report involving injury, significant property damage, or potential litigation |
-
-**Overall risk rating: HIGH** — always requires Art director review and verification. Do not automate submission.
-
----
-
 ## 🔄 Version History
 
-### v1.0 — Initial draft
-**Date:** 30 March 2026 
-**Prompt:** Generate a layout for this scene. Location: [PASTE LOCATION HERE]
-**Output:** Output vague and unuseable  
-**Observed effect:** Full redraw required
+### v1.0 
+**Prompt:** Generate a layout for this market scene.
 **Lesson learned:**  Need section structure and composition terminology constraints.
 
-### v1.1 — Grounding constraint + fallback added ✅ Current
-**Date:** 30 March 2026 
-**Change:**Added layout artist role, seven required sections, shot type and composition rule terminology
-**Output:** Model now leaves gaps explicit rather than filling them. Managers know exactly what requires follow-up.  
-**Observed effect:** 0 fabricated claims across 5 test runs. Manager review time down to ~10 min.  
+### v1.1 — 
+**Change:**Added layout artist role, seven required sections, shot type and composition rule terminology  
 **Lesson learned:** Grounding constraint essential 
 
 ## 🔗 Related Prompts
-- **Previous in chain**: P03 — Reference Collection
-- **Next in chain:** P05 — Colourkey, Lighting & Mood Spec
-- **Parent section:** [02-operations/README.md](README.md)
-- **Library index:** [README.md](../README.md)
+[P07-missing-detail-identifier.md]
