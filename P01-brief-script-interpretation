@@ -1,146 +1,26 @@
 # P01 · Brief & Script Interpretation
-
-**Section:** 01 — Planning
-**Workflow step:** Step 1 of 10  
-**Current version:** v1.2  
-**Status:** ✅ Tested
-**Last updated:** 1 April 2026
-
 ---
 
-## 📌 Prompt Text (v1.2 — current)
-
-```
-You are a background art supervisor at DeeDee animation studio working on The Adventures of Tintin. 
-
-Read the script excerpt below and extract every unique background location required.
-
-Include the following sections:
-1. Location name
-2. Scene number(s) it appears in
-3. Time of day (if specified or implied)
-4. Mood or atmosphere (if specified or implied)
-5. Key props or environmental details mentioned
-6.Estimated complexity: Low / Medium / High
-  where Low = simple interior, Medium = exterior with props,High = multi-layer environment or complex lighting
-Tone: warm, encouraging, and professional. 
-7.Flag any scenes where background requirements are unclear or missing. Maximum one entry per unique location.
-
-
-```
-
-| Placeholder | Source | Example |
-|-------------|--------|---------|
-| `[JOB_TITLE]` | HRIS new hire record | Retail Sales Associate |
-| `[STORE_NAME]` | HRIS location field | Northland Shopping Centre |
-| `[START_DATE]` | HRIS start date | Monday 24 March 2025 |
-| `[MANAGER_NAME]` | HRIS reporting line | Sarah Chen |
-| `[HR_NAME]` | Static — HR team roster | James Okafor |
-
----
-
-## 🏢 Intended Workflow or Task
-
-This prompt is **Step 1** of the planning chain 
-
-- **Trigger:** Script pages 1–18 received from director/production coordinator
-- **Actor:** Background art supervisor reviews the extracted location list
-- **Timing:** Start of production — before any backgrounds are assigned or built
-- **Next step:** P02 (Workload Prioritisation)
-
-```Director sends Tintin script pages 1–18
-      ↓
-[P01 RUNS — extracts all background locations]
-      ↓
-Supervisor reviews and approves location list
-      ↓
-List passed to P02 for prioritisation
----
-
-## ❗ Problem Being Solved
-
-Background artists in a typical 2D animation studio spend an average of 8 hours per background manually painting detailed environments from scratch.
-
-In a mid-sized studio producing 20 episodes per season with an average of 12 unique backgrounds per episode, this generates ~1,920 hours of repetitive detailing work per season — for one studio alone.
-**Pain points addressed:**
-- Implied locations buried in action lines missed during manual reads
-- Mood and atmosphere notes inconsistently captured across supervisors
-- No standardised format — every supervisor extracts differently
-- New artists can't independently interpret vague scene directions
----
-
-## ⚡ Automation Potential
-
-**Level: High**
-
-| Dimension | Assessment |
-|-----------|------------|
-| Repetitiveness | Triggered for every new episode script and every revision |
-| Data availability | Script readily available from production coordinator |
-| Human judgment needed | Supervisor confirms complexity ratings — especially for visually complex scenes |
-| Integration possibility | Output can feed directly into Shotgrid or Notion production tracker |
-| Estimated time saving | ~75% — from 45–90 min to 10–15 min per episode |
-
-**Human-in-the-loop role:** Supervisor reviews extracted list, confirms complexity ratings and approves before passing to P02.
-
----
-
-## ⚠️ Risks and Limitations
-
-| Risk | Level | Mitigation |
-|------|-------|------------|
-| AI misses implied locations  | Medium | Prompt instructs AI to flag unclear or underdescribed scenes |
-| Mood hallucinated where not stated | Medium | Prompt uses "if specified or implied" — uncertain fields flagged not assumed |
-| Complexity rated incorrectly without storyboard reference  | Medium | Supervisor confirms all complexity ratings before list enters P02 |
-| Long scripts processed in one pass may produce inconsistent extraction | Low | Process in scene blocks (e.g. 10 scenes at a time) not full episode at once |
-
-**Overall risk rating: MEDIUM** — all outputs reviewed by supervisor before entering pipeline.
+## 📌 Prompt Text 
+You are a senior background art director at an animation studio and make a brief about the Adventure of TinTin Read the following script excerpt and identify: * every distinct background location required, * the time-of-day and lighting mood for each scene, * any recurring environmental elements that must remain consistent across episodes.
+Format your output as a numbered location list with sub-points.
+-The name of the episode 
+-The series name
 
 ---
 
 ## 🔄 Version History
 
-### v1.0 — Initial draft
-**Date:** 29 March 2026 
+### v1.0 — Initial draft 
 **Prompt:** Read this script . list all the needed backgrounds  
-Script: [PASTE SCRIPT HERE]
-**Output:** Only list, missing moods , not all backgrounds
-**Observed effect:** Required full manual redo — faster to extract by hand.  
-**Lesson learned:** Need role assignment, structure, explicit output fields to preduce usable results.
+**Lesson learned:** Need explicit RACE format + sub-fields
 
 ---
 
 ### v1.1 — Added RACE framework 
-**Date:** 29 March 2026
 **Change:** Added "You are a background art supervisor at a 2D animation studio" role + structured section list  
-**Output:** Much better result, but not specific about scene such as exterior/ interior / foyer.  
 **Lesson learned:** Need explicit about complexity scale and output fields.
 
 ---
-
-### v1.2 — Added constraints and exclusions ✅ Current
-**Date:** 29 March 2026
-**Change:** Added range complexity, structured fields, flag instruction and mood, atmostphere. 
-**Output:** Consistent, all the backgrounds are listed and categorized and shownunclear scenes.
-**Observed effect:** Supervisor review time reduced 4 times. 
-**Lesson learned:** Using explicity reduce ambiguity and produce ready-to-use outputs.
----
-
-## 📊 A/B Test Results
-
-**Test date:** 1 April 2026 | **Evaluators:** 
-
-| Criteria | v1.0 score | v1.2 score |
-|----------|------------|------------|
-| Readability | 2/5 | 4.7/5 |
-| Completeness | 1/5 | 4.8/5 |
-| Tone appropriateness | 3/5 | 4.5/5 |
-| Send-ready without edit | 0/5 | 4/5 |
-| **Overall** | **1.5/5** | **4.5/5** |
-
----
-
-## 🔗 Related Prompts
-
-- **Next in chain:** [P02-workload-prioritisation] and [P02-workload-prioritisation.md]
-- **Parent section:** [01-planning/README.md](README.md)
+## Related Prompts
+[P02 · Workload Prioritisation]
