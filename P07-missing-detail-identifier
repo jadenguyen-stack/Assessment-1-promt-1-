@@ -2,16 +2,7 @@
 
 ---
 
-## 📌 Prompt Text 
-
-```
-You are a senior background art reviewer in a 2D animation studio.
-
-Using the provided information, identify any missing or incomplete background details that are required for production.
-
-
-```
-## 🔄 Version History
+## 📌 Prompt Text and History
 
 ### v1.0 
 **Prompt:** Find what is missing from this marketplace background
@@ -21,5 +12,4 @@ Using the provided information, identify any missing or incomplete background de
 **Change:**Added layout artist role, seven required sections, shot type and composition rule terminology
 **Lesson learned:** Grounding constraint essential 
 
-## 🔗 Related Prompts
-[P08- asset-documentation.md]
+
