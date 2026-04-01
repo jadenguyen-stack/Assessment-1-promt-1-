@@ -4,16 +4,16 @@
 **Workflow step:** Step 1 of 10  
 **Current version:** v1.2  
 **Status:** ✅ Tested
-**Last updated:** March 29th 2026
+**Last updated:** 1 April 2026
 
 ---
 
 ## 📌 Prompt Text (v1.2 — current)
 
 ```
-You are a background art supervisor at a 2D animation studio 
-working on The Adventures of Tintin. Read the script excerpt 
-below and extract every unique background location required.
+You are a background art supervisor at DeeDee animation studio working on The Adventures of Tintin. 
+
+Read the script excerpt below and extract every unique background location required.
 
 Include the following sections:
 1. Location name
@@ -128,7 +128,7 @@ Script: [PASTE SCRIPT HERE]
 
 ## 📊 A/B Test Results
 
-**Test date:** 17 March 2025 | **Evaluators:** 3 HR coordinators (blind)
+**Test date:** 1 April 2026 | **Evaluators:** 
 
 | Criteria | v1.0 score | v1.2 score |
 |----------|------------|------------|
@@ -142,5 +142,5 @@ Script: [PASTE SCRIPT HERE]
 
 ## 🔗 Related Prompts
 
-- **Next in chain:** P02-workload-prioritisation and P02-workload-prioritisation.md
-- **Parent section:** 01-planning/README.md](README.md)
+- **Next in chain:** [P02-workload-prioritisation] and [P02-workload-prioritisation.md]
+- **Parent section:** [01-planning/README.md](README.md)
