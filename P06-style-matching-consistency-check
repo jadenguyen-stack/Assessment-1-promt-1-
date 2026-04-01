@@ -2,23 +2,13 @@
 
 ---
 
-## 📌 Prompt Text 
-```
-You are a sstyle consistency checker in DeeDee animation studio working on The Adventures of Tintin.
-
-Use the provided information, check whether the background described conforms to the production's visual style.
-
-
-```
-## 🔄 Version History
+## 📌 Prompt Text and History
 
 ### v1.0 
 **Prompt:** Generate a layout for this market scene.
 **Lesson learned:**  Need section structure and composition terminology constraints.
 
-### v1.1 — 
+### v1.1 
 **Change:**Added layout artist role, seven required sections, shot type and composition rule terminology  
-**Lesson learned:** Grounding constraint essential 
+**Lesson learned:** Grounding constraint essential and ready-to-use ouput
 
-## 🔗 Related Prompts
-[P07-missing-detail-identifier.md]
