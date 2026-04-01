@@ -2,18 +2,9 @@
 
 ---
 
-## 📌 Prompt Text 
-
-```
-You are a senior background layout artist in a 2D animation studio.
-
-Using ONLY the scene breakdown provided below, generate a structured layout and composition plan for background production.
-
-```
-## 🔄 Version History
+## 📌 Prompt Text and History
 
 ### v1.0
-
 **Prompt:** Generate a layout for this scene.
 **Lesson learned:**  Need section structure and composition terminology constraints.
 
@@ -21,5 +12,3 @@ Using ONLY the scene breakdown provided below, generate a structured layout and 
 **Change:**Added layout artist role, sections, shot type and composition rule terminology.
 **Lesson learned:** Grounding constraint essential 
 
-## 🔗 Related Prompts
-[P05-style-matching-checker.md]
