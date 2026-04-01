@@ -2,26 +2,14 @@
 
 ---
 
-## 📌 Prompt Text 
-```
-You are a background art researcher in a 2D animation studio.
-
-Using ONLY the scene breakdown information provided, generate a structured visual reference package to support background design.
-
----
-## 🔄 Version History
+## 📌 Prompt Text and History
 
 ### v1.0
 **Prompt:** Generate references for this scene 
 **Lesson learned:** Make open-ended prompts. Grounding constraint is essential for factual/legal contexts.
-
----
 
 ### v1.1 
 **Change:** Added researcher role, five reference categories, style instruction and relevance explanation per reference..  
 **Lesson learned:** Make constrain and limits quantity.
 
 ---
-
-## 🔗 Related Prompts
-[P04-layout-composition-brief]
