@@ -1,26 +1,12 @@
 # P01 · Brief & Script Interpretation
 ---
 
-## 📌 Prompt Text 
-You are a senior background art director at an animation studio and make a brief about the Adventure of TinTin Read the following script excerpt and identify: * every distinct background location required, * the time-of-day and lighting mood for each scene, * any recurring environmental elements that must remain consistent across episodes.
-Format your output as a numbered location list with sub-points.
--The name of the episode 
--The series name
+## 📌 Prompt Text and history 
 
----
-
-## 🔄 Version History
-
-### v1.0 — Initial draft 
+### v1.0
 **Prompt:** Read this script . list all the needed backgrounds  
-**Lesson learned:** Need explicit RACE format + sub-fields
+**Lesson learned:** Need explicit RACE format + sub-field
 
----
-
-### v1.1 — Added RACE framework 
+### v1.1 
 **Change:** Added "You are a background art supervisor at a 2D animation studio" role + structured section list  
-**Lesson learned:** Need explicit about complexity scale and output fields.
-
----
-## Related Prompts
-[P02 · Workload Prioritisation]
+**Lesson learned:** Need explicit about complexity scale and output field.
